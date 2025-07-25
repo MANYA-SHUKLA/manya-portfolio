@@ -22,7 +22,7 @@ function ProjectPanel() {
   {
     title: "Doctor-Patient Locator",
     description: "A location-based web application that connects patients with nearby doctors using Google Maps API and MongoDB geospatial queries.",
-    live: "https://your-doctor-app-link.vercel.app/", 
+    live: "https://github.com/MANYA-SHUKLA/doctor-patient-locator", 
     image: "/doctor.png", 
     tags: ["React.js", "Node.js", "MongoDB", "Google Maps API", "express.js"]
   },
