@@ -29,7 +29,7 @@ function ProjectPanel() {
   {
     title: "Artwork Table UI",
     description: "An interactive and responsive UI table for managing artwork data using PrimeReact components with filtering and pagination.",
-    live: "https://your-artwork-table-link.vercel.app/", 
+    live: "https://artworks-data-table-k6x5.vercel.app/", 
     image: "/row.png", 
     tags: ["React.js", "PrimeReact", "CSS", "JavaScript"]
   },
