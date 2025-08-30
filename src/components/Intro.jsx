@@ -69,7 +69,7 @@ function Intro() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://docs.google.com/document/d/1sZm-pXHYxLVJTD4yUqVUEXJ5oCClloz2QP9VnRjYaTE/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1lTCFnN52DzzxgNiTpGpxFPbuqxaIBu6WkuEr2IVHQuY/edit?tab=t.0"
             target="_blank"
             rel="noreferrer"
             className="w-full sm:w-auto"
