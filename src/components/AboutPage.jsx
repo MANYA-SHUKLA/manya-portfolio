@@ -68,7 +68,7 @@ function AboutPage() {
             className="mt-10 flex justify-center lg:justify-start"
           >
             <a
-              href="https://docs.google.com/document/d/1lTCFnN52DzzxgNiTpGpxFPbuqxaIBu6WkuEr2IVHQuY/edit?tab=t.0"
+              href="https://docs.google.com/document/d/1lTCFnN52DzzxgNiTpGpxFPbuqxaIBu6WkuEr2IVHQuY/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
