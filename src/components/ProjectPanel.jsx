@@ -30,7 +30,7 @@ function ProjectPanel() {
     title: "Doctor-Patient Locator",
     description: "A location-based web application that connects patients with nearby doctors using Google Maps API and MongoDB geospatial queries.",
     live: "https://github.com/MANYA-SHUKLA/doctor-patient-locator", 
-    image: "/doctor.png", 
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8z4cnVeqvIgBEXK7dTNMDbhHZar09rc21yw&s", 
     tags: ["React.js", "Node.js", "MongoDB", "Google Maps API", "express.js"]
   },
   {
