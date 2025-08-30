@@ -16,7 +16,7 @@ function ProjectPanel() {
   description: "A pixel-perfect e-commerce frontend built with React.js, featuring modern UI, dynamic product listings, and responsive design.",
   live: "https://manya-closet.vercel.app/",
   image: "/site.png",
-  tags: [MongoDB, Express.js, React.js, Node.js, JWT, Material-UI, Axios, Recharts, Framer Motion]
+  tags: ["React.js", "Javascript", "CSS", "Responsive Design"]
 },
 
   {
