@@ -15,7 +15,7 @@ function ProjectPanel() {
   title: "Task Manager App",
   description: "A full-stack Task Manager app with secure user authentication, database-backed task CRUD operations, and status management for pending and completed tasks.",
   live: "https://task-manager-app-gray-nine.vercel.app/login",
-  image: "https://snacknation.com/wp-content/uploads/2020/12/Best-Task-Management-Software-Platforms.png"
+  image: "https://img.graphicsurf.com/2020/10/task-manager-vector-design-concept.jpg",
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
 },
  {
