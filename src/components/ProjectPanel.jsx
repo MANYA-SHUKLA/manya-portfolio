@@ -5,6 +5,13 @@ import WebsiteIcom from "../assets/website.svg";
 function ProjectPanel() {
   const Projects = [
   {
+  title: "Advika Physiotherapy Clinic",
+  description: "Developed and deployed the backend for Advika Physiotherapy Clinic website at Zentrok, Noida. Implemented secure APIs, contact form integration, automated email notifications and database set-up",
+  live: "https://advika-physiotherapy-clinic.vercel.app/",
+  image: "https://skydecengineers.com/wp-content/uploads/2025/01/Tips-for-Designing-a-Small-Physiotherapy-Clinic.jpg",
+  tags: ["MongoDB", 'React.js", "Typescript", "Nodemailer", "Framer Motion"]
+},
+  {
   title: "Quick Management System",
   description: "A full-stack Queue Management System with secure JWT authentication, real-time token handling, and performance analytics using Recharts.",
   live: "https://queue-management-system-five.vercel.app/login",
