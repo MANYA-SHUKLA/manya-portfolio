@@ -18,6 +18,13 @@ function ProjectPanel() {
   image: "https://img.graphicsurf.com/2020/10/task-manager-vector-design-concept.jpg",
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
 },
+    {
+  title: "Lead management system",
+  description: "AFull-stack web app for managing sales leads. Features React frontend with beautiful UI, Node.js/Express backend, MongoDB database.",
+  live: "https://lead-management-system-pipelines.vercel.app/",
+  image: "https://d3a93fg1wt2nf3.cloudfront.net/static/website/images/lm-images/lead-management.svg",
+  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
+},
  {
   title: "Manya Closet",
   description: "A pixel-perfect e-commerce frontend built with React.js, featuring modern UI, dynamic product listings, and responsive design.",
