@@ -6,10 +6,24 @@ function ProjectPanel() {
   const Projects = [
   {
   title: "Advika Physiotherapy Clinic",
-  description: "Developed and deployed the backend for Advika Physiotherapy Clinic website at Zentrok, Noida. Implemented secure APIs, contact form integration, automated email notifications and database set-up",
+  description: "Developed and deployed the backend for Advika Physiotherapy Clinic website at Zentrok, Noida. Implemented secure APIs, contact form integration, automated email notifications and database set-up.",
   live: "https://advika-physiotherapy-clinic.vercel.app/",
   image: "https://skydecengineers.com/wp-content/uploads/2025/01/Tips-for-Designing-a-Small-Physiotherapy-Clinic.jpg",
   tags: ["MongoDB", "React.js", "Typescript", "Nodemailer", "Framer Motion"]
+},
+   {
+  title: "Task Manager App",
+  description: "A full-stack Task Manager app with secure user authentication, database-backed task CRUD operations, and status management for pending and completed tasks.",
+  live: "https://task-manager-app-gray-nine.vercel.app/login",
+  image: "https://img.graphicsurf.com/2020/10/task-manager-vector-design-concept.jpg",
+  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
+},
+   {
+  title: "Oxygen Times Demo Project",
+  description: "This was a front-end demo project for a client at Zentrok Noida, where I developed a Next.js application for a home healthcare company.",
+  live: "https://oxo-life.vercel.app/",
+  image: "https://static.wixstatic.com/media/634300_39c1150718a84bbf834d7ec34761490b~mv2.png/v1/fill/w_538,h_538,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/634300_39c1150718a84bbf834d7ec34761490b~mv2.png",
+  tags: ["Next.js", "React.js", "Tailwind CSS", "Framer Motion"]
 },
   {
   title: "Quick Management System",
@@ -19,13 +33,6 @@ function ProjectPanel() {
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
 },
   {
-  title: "Task Manager App",
-  description: "A full-stack Task Manager app with secure user authentication, database-backed task CRUD operations, and status management for pending and completed tasks.",
-  live: "https://task-manager-app-gray-nine.vercel.app/login",
-  image: "https://img.graphicsurf.com/2020/10/task-manager-vector-design-concept.jpg",
-  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
-},
-    {
   title: "Lead management system",
   description: "AFull-stack web app for managing sales leads. Features React frontend with beautiful UI, Node.js/Express backend, MongoDB database.",
   live: "https://lead-management-system-pipelines.vercel.app/",
