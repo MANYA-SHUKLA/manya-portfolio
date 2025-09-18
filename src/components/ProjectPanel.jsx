@@ -23,7 +23,7 @@ function ProjectPanel() {
   description: "This was a front-end demo project for a client at Zentrok Noida, where I developed a Next.js application for a home healthcare company.",
   live: "https://oxo-life.vercel.app/",
   image: "https://static.wixstatic.com/media/634300_39c1150718a84bbf834d7ec34761490b~mv2.png/v1/fill/w_538,h_538,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/634300_39c1150718a84bbf834d7ec34761490b~mv2.png",
-  tags: ["Next.js", "React.js", "Tailwind CSS", "Framer Motion"]
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Framer Motion"]
 },
   {
   title: "Quick Management System",
@@ -38,6 +38,13 @@ function ProjectPanel() {
   live: "https://lead-management-system-pipelines.vercel.app/",
   image: "https://d3a93fg1wt2nf3.cloudfront.net/static/website/images/lm-images/lead-management.svg",
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
+},
+     {
+  title: "Weather Companion",
+  description: "The Weather Companion provides current weather and a 5-day forecast for any city in the world. The app fetches weather, forecast, and air quality data from the OpenWeather API.",
+  live: "https://weather-app-xi-seven-14.vercel.app/",
+  image: "https://media.istockphoto.com/id/1004864992/vector/summer-and-rainy-season-paper-art-vector-illustration.jpg?s=612x612&w=0&k=20&c=Xl29byjPEoeA-VV2qxa9Q32W_fzwtN8sxvdRlEXbQTE=",
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "OpenWeather API"]
 },
  {
   title: "Manya Closet",
