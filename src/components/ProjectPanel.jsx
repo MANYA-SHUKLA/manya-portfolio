@@ -34,7 +34,7 @@ function ProjectPanel() {
 },
   {
   title: "Lead management system",
-  description: "AFull-stack web app for managing sales leads. Features React frontend with beautiful UI, Node.js/Express backend, MongoDB database.",
+  description: "A Full-stack web app for managing sales leads. Features React frontend with beautiful UI, Node.js/Express backend, MongoDB database.",
   live: "https://lead-management-system-pipelines.vercel.app/",
   image: "https://d3a93fg1wt2nf3.cloudfront.net/static/website/images/lm-images/lead-management.svg",
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
@@ -46,6 +46,14 @@ function ProjectPanel() {
   image: "https://media.istockphoto.com/id/1004864992/vector/summer-and-rainy-season-paper-art-vector-illustration.jpg?s=612x612&w=0&k=20&c=Xl29byjPEoeA-VV2qxa9Q32W_fzwtN8sxvdRlEXbQTE=",
   tags: ["Next.js", "Typescript", "Tailwind CSS", "OpenWeather API"]
 },
+    {
+  title: "Habit Tracker",
+  description: "A full-stack web application built to help users create, manage, and track their personal habits while also staying connected with friends for accountability. .",
+  live: "https://habit-tracker-app-silk.vercel.app/",
+  image: "https://habitsbuzz.com/wp-content/uploads/2018/08/butterfliesandletters-1024x1024.jpg",
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Nodejs","Expressjs", "MongoDB", "JWT"]
+},
+
  {
   title: "Manya Closet",
   description: "A pixel-perfect e-commerce frontend built with React.js, featuring modern UI, dynamic product listings, and responsive design.",
