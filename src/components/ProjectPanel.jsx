@@ -53,6 +53,13 @@ function ProjectPanel() {
   image: "https://habitsbuzz.com/wp-content/uploads/2018/08/butterfliesandletters-1024x1024.jpg",
   tags: ["Next.js", "Typescript", "Tailwind CSS", "Nodejs","Expressjs", "MongoDB", "JWT"]
 },
+    {
+  title: "BMW - Frontend",
+  description: "A sleek BMW India frontend site showcasing its luxury & electric vehicle line-up, offering configurator, test drives, dealer locations, and special finance offers.",
+  live: "https://bmw-frontend.vercel.app/",
+  image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series/10182/1750747451665/front-left-side-47.jpg",
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Responsive Design"]
+},
 
  {
   title: "Manya Closet",
