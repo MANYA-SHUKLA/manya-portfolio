@@ -11,6 +11,13 @@ function ProjectPanel() {
   image: "https://skydecengineers.com/wp-content/uploads/2025/01/Tips-for-Designing-a-Small-Physiotherapy-Clinic.jpg",
   tags: ["MongoDB", "React.js", "Typescript", "Nodemailer", "Framer Motion"]
 },
+    {
+  title: "Real time polling",
+  description: "A full-stack, real-time voting platform using WebSockets for instant updates, with secure authentication and a scalable backend.",
+  live: "https://real-time-polling-one.vercel.app/",
+  image: "https://surveyjs.io/stay-updated/blog/articles/create-poll-and-visualize-results-with-chart-that-updates-in-real-time/vote-in-real-time.png",
+  tags: ["MongoDB", "Express.js", "Next.js", "Node.js", "JWT","WebSockets.io"]
+},
    {
   title: "Task Manager App",
   description: "A full-stack Task Manager app with secure user authentication, database-backed task CRUD operations, and status management for pending and completed tasks.",
