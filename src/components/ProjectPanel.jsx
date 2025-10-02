@@ -74,7 +74,13 @@ function ProjectPanel() {
   image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series/10182/1750747451665/front-left-side-47.jpg",
   tags: ["Next.js", "Typescript", "Tailwind CSS", "Responsive Design"]
 },
-
+  {
+  title: "IELTSAce - Frontend",
+  description: "Developed the complete Next.js/TypeScript frontend for IELTSAce, an AI-powered platform featuring simulated practice tests, expert-guided courses, detailed analytics, and secure document viewing.",
+  live: "https://ielts-ace-frontend.vercel.app/",
+  image: "https://edunirvana.in/wp-content/uploads/2023/10/IELTS-Academic-How-to-Ace-Your.jpg",
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Responsive Design"]
+},
  {
   title: "Manya Closet",
   description: "A pixel-perfect e-commerce frontend built with React.js, featuring modern UI, dynamic product listings, and responsive design.",
