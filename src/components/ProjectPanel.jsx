@@ -65,7 +65,7 @@ function ProjectPanel() {
   description: "A full-stack web application built to help users create, manage, and track their personal habits while also staying connected with friends for accountability. .",
   live: "https://habit-tracker-app-silk.vercel.app/",
   image: "https://habitsbuzz.com/wp-content/uploads/2018/08/butterfliesandletters-1024x1024.jpg",
-  tags: ["Next.js", "Typescript", "Tailwind CSS", "Nodejs","Expressjs", "MongoDB", "JWT"]
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "JWT"]
 },
     {
   title: "BMW - Frontend",
@@ -74,7 +74,13 @@ function ProjectPanel() {
   image: "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/5-Series/10182/1750747451665/front-left-side-47.jpg",
   tags: ["Next.js", "Typescript", "Tailwind CSS", "Responsive Design"]
 },
- 
+  {
+  title: "BookIt - Adventures",
+  description: "Embark on unforgettable adventures with curated experiences from around the world.",
+  live: "https://book-it-adventures.vercel.app/",
+  image: "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/11/29111135/grindelwald.jpeg",
+  tags: ["Next.js", "Typescript", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "Responsive Design"]
+},
  {
   title: "Manya Closet",
   description: "A pixel-perfect e-commerce frontend built with React.js, featuring modern UI, dynamic product listings, and responsive design.",
