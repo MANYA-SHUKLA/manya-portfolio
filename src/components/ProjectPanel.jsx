@@ -76,7 +76,7 @@ function ProjectPanel() {
 },
   {
   title: "BookIt - Adventures",
-  description: "Embark on unforgettable adventures with curated experiences from around the world.",
+  description: "Embark on unforgettable adventures with curated experiences from around the world. It allows users to browse, book, and manage curated travel experiences worldwide.",
   live: "https://book-it-adventures.vercel.app/",
   image: "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/11/29111135/grindelwald.jpeg",
   tags: ["Next.js", "Typescript", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "Responsive Design"]
