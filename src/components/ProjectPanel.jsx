@@ -18,6 +18,13 @@ function ProjectPanel() {
   image: "https://surveyjs.io/stay-updated/blog/articles/create-poll-and-visualize-results-with-chart-that-updates-in-real-time/vote-in-real-time.png",
   tags: ["MongoDB", "Express.js", "Next.js", "Node.js", "JWT","WebSockets.io"]
 },
+      {
+  title: "Job Chaahiye Platform",
+  description: "Hey",
+  live: "https://job-chaahiye-platform.vercel.app/",
+  image: "https://staffinghub.com/wp-content/uploads/2024/02/bigstock-Job-Search-Concept-Find-Your-412364356-696x465.jpg",
+  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
+},
    {
   title: "Task Manager App",
   description: "A full-stack Task Manager app with secure user authentication, database-backed task CRUD operations, and status management for pending and completed tasks.",
