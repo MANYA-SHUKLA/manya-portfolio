@@ -20,7 +20,7 @@ function ProjectPanel() {
 },
       {
   title: "Job Chaahiye Platform",
-  description: "Hey",
+  description: "A full-stack job search and recruitment platform connecting job seekers with employers. Features secure user authentication, job listings, application management, and a seamless user experience for both candidates and recruiters.",
   live: "https://job-chaahiye-platform.vercel.app/",
   image: "https://staffinghub.com/wp-content/uploads/2024/02/bigstock-Job-Search-Concept-Find-Your-412364356-696x465.jpg",
   tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"]
@@ -120,24 +120,88 @@ function ProjectPanel() {
 ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-blue-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 transition-colors duration-300 relative overflow-hidden">
+      {/* Floating Shapes */}
+      <motion.div
+        className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-400 dark:from-blue-600 dark:to-cyan-600 rounded-full opacity-15 dark:opacity-25 blur-3xl pointer-events-none"
+        animate={{
+          y: [0, -40, 0],
+          x: [0, 30, 0],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-600 dark:to-pink-600 rounded-full opacity-20 dark:opacity-30 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, 35, 0],
+          x: [0, -25, 0],
+          scale: [1, 1.25, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 left-1/3 w-28 h-28 bg-gradient-to-br from-cyan-400 to-blue-400 dark:from-cyan-600 dark:to-blue-600 rounded-full opacity-18 dark:opacity-28 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, -30, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 12, repeat: Infinity, ease: "linear" },
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 right-10 w-0 h-0 border-l-[18px] border-r-[18px] border-b-[30px] border-l-transparent border-r-transparent border-b-blue-400 dark:border-b-cyan-400 opacity-20 dark:opacity-30 pointer-events-none"
+        animate={{
+          rotate: [360, 0],
+          y: [0, -25, 0],
+        }}
+        transition={{
+          rotate: { duration: 18, repeat: Infinity, ease: "linear" },
+          y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 right-1/4 w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 rounded-full opacity-25 dark:opacity-35 blur-xl pointer-events-none"
+        animate={{
+          y: [0, 25, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            My <span className="text-blue-600">Projects</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-colors duration-300">
+            My <span className="text-blue-600 dark:text-cyan-400">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4 transition-colors duration-300">
             Showcasing my skills through real-world applications and solutions
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {Projects.map((project, index) => (
             <motion.div
               key={index}
@@ -158,44 +222,88 @@ function ProjectPanel() {
 const ProjectCard = ({ project }) => {
   return (
     <motion.div 
-      whileHover={{ y: -10 }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-gray-100"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ 
+        y: -15,
+        scale: 1.02,
+      }}
+      transition={{ 
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }}
+      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 overflow-hidden h-full flex flex-col border border-gray-100 dark:border-gray-700 relative group transition-colors duration-300"
     >
       {/* Image with gradient overlay */}
       <div className="relative aspect-video overflow-hidden">
-        <img
+        <motion.img
           loading="lazy"
           src={project.image}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className="w-full h-full object-cover"
           alt={project.title}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, i) => (
-              <span key={i} className="bg-blue-500/80 text-white text-xs px-2 py-1 rounded">
-                {tag}
-              </span>
-            ))}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="absolute inset-0 flex items-end p-4">
+            <motion.div 
+              className="flex flex-wrap gap-2"
+              initial={{ y: 20, opacity: 0 }}
+              whileHover={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {project.tags.map((tag, i) => (
+                <motion.span 
+                  key={i} 
+                  className="bg-blue-500/90 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full font-medium"
+                  initial={{ scale: 0 }}
+                  whileHover={{ scale: [0, 1.1, 1] }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  {tag}
+                </motion.span>
+              ))}
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+      <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
+        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 flex-grow transition-colors duration-300">{project.description}</p>
         
         {/* Action buttons */}
         <div className="flex justify-between items-center">
-          <a
+          <motion.a
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-blue-600 text-white rounded-lg text-sm sm:text-base font-medium relative overflow-hidden group/btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <img src={WebsiteIcom} alt="Live Demo" className="w-5 h-5" />
-            <span>View Live</span>
-          </a>
+            <motion.div
+              className="absolute inset-0 bg-blue-700"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+            <img src={WebsiteIcom} alt="Live Demo" className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" />
+            <motion.span 
+              className="relative z-10"
+              whileHover={{ x: 3 }}
+            >
+              View Live
+            </motion.span>
+          </motion.a>
         </div>
       </div>
     </motion.div>

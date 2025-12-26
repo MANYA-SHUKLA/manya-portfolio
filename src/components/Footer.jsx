@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -99,8 +99,72 @@ const Footer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 relative overflow-hidden">
+      {/* Floating Shapes */}
+      <motion.div
+        className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-cyan-400 dark:from-blue-600 dark:to-cyan-600 rounded-full opacity-15 dark:opacity-25 blur-3xl pointer-events-none"
+        animate={{
+          y: [0, -35, 0],
+          x: [0, 25, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute top-1/3 right-20 w-32 h-32 bg-gradient-to-br from-purple-400 to-indigo-400 dark:from-purple-600 dark:to-indigo-600 rounded-full opacity-18 dark:opacity-28 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, 40, 0],
+          x: [0, -30, 0],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-400 dark:from-cyan-600 dark:to-blue-600 rounded-full opacity-20 dark:opacity-30 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, -30, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 15, repeat: Infinity, ease: "linear" },
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 right-1/3 w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-blue-400 dark:border-b-cyan-400 opacity-20 dark:opacity-30 pointer-events-none"
+        animate={{
+          rotate: [0, 360],
+          y: [0, -20, 0],
+        }}
+        transition={{
+          rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 },
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-28 h-28 bg-gradient-to-br from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 rounded-full opacity-22 dark:opacity-32 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, 30, 0],
+          scale: [1, 1.25, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -109,13 +173,13 @@ const Footer = () => {
         >
           <motion.h2
             variants={item}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300"
           >
             Get In Touch
           </motion.h2>
           <motion.p
             variants={item}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4 transition-colors duration-300"
           >
             Have a project in mind or want to collaborate? Drop me a message!
           </motion.p>
@@ -125,17 +189,17 @@ const Footer = () => {
       
           <motion.div
             variants={item}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-gray-900/50 overflow-hidden transition-colors duration-300"
           >
-            <div className="p-8 sm:p-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <FaPaperPlane className="text-blue-500 mr-3" />
+            <div className="p-6 sm:p-8 md:p-10">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center transition-colors duration-300">
+                <FaPaperPlane className="text-blue-500 dark:text-cyan-400 mr-3 flex-shrink-0" />
                 Send Me a Message
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div variants={item}>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 transition-colors duration-300">
                     Your Name
                   </label>
                   <input
@@ -144,14 +208,14 @@ const Footer = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-lg border ${errors.name ? "border-red-500" : "border-gray-300"} focus:ring-2 focus:ring-blue-500 focus:border-transparent transition`}
-                    placeholder="John Doe"
+                    className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-600"} focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition`}
+                    placeholder="Manya Shukla"
                   />
                   {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                 </motion.div>
 
                 <motion.div variants={item}>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 transition-colors duration-300">
                     Email Address
                   </label>
                   <input
@@ -160,14 +224,14 @@ const Footer = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-lg border ${errors.email ? "border-red-500" : "border-gray-300"} focus:ring-2 focus:ring-blue-500 focus:border-transparent transition`}
-                    placeholder="john@example.com"
+                    className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-600"} focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition`}
+                    placeholder="shuklamanya99@gmail.com"
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                 </motion.div>
 
                 <motion.div variants={item}>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 transition-colors duration-300">
                     Your Message
                   </label>
                   <textarea
@@ -176,8 +240,8 @@ const Footer = () => {
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-lg border ${errors.message ? "border-red-500" : "border-gray-300"} focus:ring-2 focus:ring-blue-500 focus:border-transparent transition`}
-                    placeholder="Hello, I'd like to talk about..."
+                    className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-600"} focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition`}
+                    placeholder="Hy Manya Shukla"
                   ></textarea>
                   {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                 </motion.div>
@@ -248,10 +312,10 @@ const Footer = () => {
             
             <motion.div
               variants={item}
-              className="bg-white p-8 rounded-2xl shadow-xl"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <FaMapMarkerAlt className="text-blue-500 mr-3" />
+            className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl dark:shadow-gray-900/50 transition-colors duration-300"
+          >
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center transition-colors duration-300">
+                <FaMapMarkerAlt className="text-blue-500 mr-3 flex-shrink-0" />
                 Contact Information
               </h3>
 
@@ -259,28 +323,38 @@ const Footer = () => {
                 <div className="flex items-start">
                   <FaMapMarkerAlt className="text-blue-500 mt-1 mr-4 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-gray-900">Address</h4>
-                    <p className="text-gray-600">Damodar Hostel, JNU, New Delhi, India (110067)</p>
+                    <h4 className="font-medium text-gray-900 dark:text-white">Address</h4>
+                    <p className="text-gray-600 dark:text-gray-300">Damodar Hostel, JNU, New Delhi, India (110067)</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <FaEnvelope className="text-blue-500 mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium text-gray-900">Email</h4>
-                    <a href="mailto:work.shuklamanya@gmail.com" className="text-gray-600 hover:text-blue-600 transition">
-                      work.shuklamanya@gmail.com , 
-                      shuklamanya99@gmail.com , 
-                      manyas36_soe@jnu.ac.in
-                    </a>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-medium text-gray-900 dark:text-white">Email</h4>
+                    <div className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                      <a href="mailto:work.shuklamanya@gmail.com" className="hover:text-blue-600 dark:hover:text-cyan-400 transition break-all">
+                        work.shuklamanya@gmail.com
+                      </a>
+                      <br className="sm:hidden" />
+                      <span className="hidden sm:inline">, </span>
+                      <a href="mailto:shuklamanya99@gmail.com" className="hover:text-blue-600 transition break-all">
+                        shuklamanya99@gmail.com
+                      </a>
+                      <br className="sm:hidden" />
+                      <span className="hidden sm:inline">, </span>
+                      <a href="mailto:manyas36_soe@jnu.ac.in" className="hover:text-blue-600 transition break-all">
+                        manyas36_soe@jnu.ac.in
+                      </a>
+                    </div>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <FaPhoneAlt className="text-blue-500 mt-1 mr-4 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-gray-900">Phone</h4>
-                    <a href="tel:+918005586588" className="text-gray-600 hover:text-blue-600 transition">
+                    <h4 className="font-medium text-gray-900 dark:text-white">Phone</h4>
+                    <a href="tel:+918005586588" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 transition">
                       +91 8005586588
                     </a>
                   </div>
@@ -289,11 +363,12 @@ const Footer = () => {
 
               {/* Social Media Links */}
               <div className="mt-8">
-                <h4 className="font-medium text-gray-900 mb-4">Connect With Me</h4>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-4 transition-colors duration-300">Connect With Me</h4>
                 <div className="flex space-x-4">
                   {[
                     { icon: <FaLinkedin />, color: "text-blue-700", href: "https://www.linkedin.com/in/manya-shukla99/" },
                     { icon: <FaGithub />, color: "text-black-700", href: "https://github.com/MANYA-SHUKLA" },
+                    { icon: <FaWhatsapp />, color: "text-green-600", href: "https://wa.me/918005586588?text=Hy%20Manya%20Shukla" },
                   ].map((social, index) => (
                     <motion.a
                       key={index}

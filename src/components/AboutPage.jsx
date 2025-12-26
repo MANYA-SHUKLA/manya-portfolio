@@ -3,10 +3,86 @@ import { motion } from "framer-motion";
 
 function AboutPage() {
   return (
-    <section className="relative bg-white py-16 md:py-24 px-6 sm:px-8 md:px-12 lg:px-24 xl:px-32 overflow-hidden">
+    <section className="relative bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 overflow-hidden transition-colors duration-300">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      <motion.div 
+        className="absolute top-0 left-0 w-64 h-64 bg-blue-100 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-30 transition-colors duration-300"
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 30, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div 
+        className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 dark:bg-indigo-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-30 transition-colors duration-300"
+        animate={{
+          scale: [1, 1.3, 1],
+          x: [0, -30, 0],
+          y: [0, 30, 0],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
+      
+      {/* Floating Shapes */}
+      <motion.div
+        className="absolute top-1/4 right-10 w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 rounded-full opacity-20 dark:opacity-30 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, -25, 0],
+          x: [0, 15, 0],
+          scale: [1, 1.15, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 left-10 w-28 h-28 bg-gradient-to-br from-cyan-400 to-blue-400 dark:from-cyan-600 dark:to-blue-600 rounded-full opacity-15 dark:opacity-25 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, 30, 0],
+          x: [0, -20, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/4 w-0 h-0 border-l-[15px] border-r-[15px] border-b-[25px] border-l-transparent border-r-transparent border-b-indigo-400 dark:border-b-purple-400 opacity-25 dark:opacity-35 pointer-events-none"
+        animate={{
+          rotate: [0, 360],
+          y: [0, -20, 0],
+        }}
+        transition={{
+          rotate: { duration: 12, repeat: Infinity, ease: "linear" },
+          y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-400 dark:from-blue-600 dark:to-indigo-600 rounded-full opacity-20 dark:opacity-30 blur-xl pointer-events-none"
+        animate={{
+          y: [0, -30, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 },
+          rotate: { duration: 14, repeat: Infinity, ease: "linear" },
+        }}
+      />
       
       <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left - Image */}
@@ -18,13 +94,30 @@ function AboutPage() {
           className="w-full lg:w-1/2 flex justify-center"
         >
           <div className="relative group">
-            <img
+            <motion.div
+              className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-xl sm:rounded-2xl blur-xl opacity-0 group-hover:opacity-30"
+              transition={{ duration: 0.3 }}
+            />
+            <motion.img
               src="https://i.pinimg.com/736x/09/6b/53/096b53da91d3e807d53419aea798376d.jpg"
               alt="MANYA SHUKLA"
               loading="lazy"
-              className="w-full max-w-md h-auto rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+              className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto rounded-xl sm:rounded-2xl shadow-xl z-10"
+              whileHover={{ 
+                scale: 1.05,
+                rotate: [0, -2, 2, -2, 0],
+              }}
+              transition={{ 
+                scale: { duration: 0.3 },
+                rotate: { duration: 0.5 }
+              }}
             />
-            <div className="absolute inset-0 rounded-2xl border-4 border-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            <motion.div 
+              className="absolute inset-0 rounded-xl sm:rounded-2xl border-4 border-white/30 pointer-events-none z-20"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
           </div>
         </motion.div>
 
@@ -36,11 +129,11 @@ function AboutPage() {
           viewport={{ once: true }}
           className="w-full lg:w-1/2"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center lg:text-left">
-            About <span className="text-blue-600">Me</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-5 md:mb-6 text-center lg:text-left transition-colors duration-300">
+            About <span className="text-blue-600 dark:text-cyan-400">Me</span>
           </h1>
 
-          <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+          <div className="space-y-4 sm:space-y-5 md:space-y-6 text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed transition-colors duration-300">
             <p>
               I am a currently pursuing Computer Science Engineering and 
               have a passion for building innovative digital solutions. 
@@ -48,14 +141,14 @@ function AboutPage() {
             </p>
             
             <p>
-              Currently specializing in <span className="font-semibold text-blue-600">Web Development</span>, 
+              Currently specializing in <span className="font-semibold text-blue-600 dark:text-cyan-400">Web Development</span>, 
               I combine technical skills with creative problem-solving to build 
               applications that make an impact. As a competitive programmer, I thrive 
               on challenges that push my abilities to new heights.
             </p>
             
             <p>
-              I'm deeply committed to the <span className="font-semibold text-blue-600">open-source community</span> 
+              I'm deeply committed to the <span className="font-semibold text-blue-600 dark:text-cyan-400">open-source community</span> 
               and actively seek collaborations that can benefit developers worldwide. 
               Every line of code I write is an opportunity to learn and contribute 
               to something meaningful.
@@ -63,18 +156,27 @@ function AboutPage() {
           </div>
 
           <motion.div 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-10 flex justify-center lg:justify-start"
+            className="mt-8 sm:mt-10 flex justify-center lg:justify-start"
           >
-            <a
+            <motion.a
               href="https://docs.google.com/document/d/1lTCFnN52DzzxgNiTpGpxFPbuqxaIBu6WkuEr2IVHQuY/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
+              className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-lg font-medium text-sm sm:text-base relative overflow-hidden group"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
             >
-              Download My CV
-            </a>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+              <span className="relative z-10">Download My CV</span>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -24,53 +25,106 @@ function Faq() {
       ans: "Yes, I can work remotely and collaborate with clients from anywhere in the world.",
     },
     {
-  id: 4,
-  que: "What technologies do you work with?",
-  ans: "I work with the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, Tailwind CSS, REST APIs, and also have experience with C++, Python, and MySQL.",
-},
-{
-  id: 5,
-  que: "Can you build complete full-stack applications?",
-  ans: "Yes, I design and develop end-to-end web applications with responsive frontends and secure, scalable backends.",
-},
+      id: 4,
+      que: "What technologies do you work with?",
+      ans: "I work with the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, Tailwind CSS, REST APIs, and also have experience with C++, Python, and MySQL.",
+    },
+    {
+      id: 5,
+      que: "Can you build complete full-stack applications?",
+      ans: "Yes, I design and develop end-to-end web applications with responsive frontends and secure, scalable backends.",
+    },
   ];
 
   return (
-    <div className="bg-white px-6 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-10 md:py-1 lg:py-10">
-      <h2 className="font-bold text-black text-2xl md:text-5xl text-center">
-        FAQ
-      </h2>
-      <p className="text-center text-textBlackColor pt-2 text-sm sm:text-base">
-        Explore my portfolio, learn about my skills, and get answers to
-        frequently asked questions about my work, collaborations, and more
-      </p>
+    <div className="bg-white dark:bg-gray-900 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-8 sm:py-10 md:py-12 lg:py-16 transition-colors duration-300 relative overflow-hidden">
+      {/* Floating Shapes */}
+      <motion.div
+        className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-400 dark:from-blue-600 dark:to-cyan-600 rounded-full opacity-15 dark:opacity-25 blur-3xl pointer-events-none"
+        animate={{
+          y: [0, -30, 0],
+          x: [0, 20, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 left-10 w-28 h-28 bg-gradient-to-br from-purple-400 to-pink-400 dark:from-purple-600 dark:to-pink-600 rounded-full opacity-18 dark:opacity-28 blur-2xl pointer-events-none"
+        animate={{
+          y: [0, 35, 0],
+          x: [0, -25, 0],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      />
+      <motion.div
+        className="absolute top-1/3 left-1/4 w-0 h-0 border-l-[15px] border-r-[15px] border-b-[25px] border-l-transparent border-r-transparent border-b-blue-400 dark:border-b-cyan-400 opacity-20 dark:opacity-30 pointer-events-none"
+        animate={{
+          rotate: [0, 360],
+          y: [0, -25, 0],
+        }}
+        transition={{
+          rotate: { duration: 16, repeat: Infinity, ease: "linear" },
+          y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-400 dark:from-cyan-600 dark:to-blue-600 rounded-full opacity-22 dark:opacity-32 blur-xl pointer-events-none"
+        animate={{
+          y: [0, -28, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 },
+          rotate: { duration: 13, repeat: Infinity, ease: "linear" },
+        }}
+      />
+      
+      <div className="max-w-4xl mx-auto relative z-10">
+        <h2 className="font-bold text-black dark:text-white text-3xl sm:text-4xl md:text-5xl text-center mb-3 transition-colors duration-300">
+          FAQ
+        </h2>
+        <p className="text-center text-textBlackColor dark:text-gray-300 pt-2 text-sm sm:text-base md:text-lg px-4 mb-8 sm:mb-12 md:mb-16 transition-colors duration-300">
+          Explore my portfolio, learn about my skills, and get answers to
+          frequently asked questions about my work, collaborations, and more
+        </p>
 
-      <div className="mt-16 space-y-4">
-        {faq.map((item, index) => (
-          <div
-            key={item.id}
-            className="border-[1px] border-black rounded-xl"
-          >
-            <h2>
-              <button
-                className={`w-full text-left px-4 py-4 text-lg sm:text-xl text-textBlackColor font-semibold ${
-                  activeIndex === index ? "rounded-t-lg" : "rounded-lg"
-                }`}
-                onClick={() => toggleAccordion(index)}
-              >
-                {item.que}
-              </button>
-            </h2>
-            {activeIndex === index && (
-              <div className="px-4 py-4 text-base sm:text-lg text-textBlackColor">
-                {" "}
-                • {item.ans}
-              </div>
-            )}
-          </div>
-        ))}
+        <div className="space-y-3 sm:space-y-4">
+          {faq.map((item, index) => (
+            <div
+              key={item.id}
+              className="border-[1px] border-black dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 transition-colors duration-300"
+            >
+              <h2>
+                <button
+                  className={`w-full text-left px-4 sm:px-5 md:px-6 py-3 sm:py-4 text-base sm:text-lg md:text-xl text-textBlackColor dark:text-gray-200 font-semibold transition-colors duration-300 ${
+                    activeIndex === index ? "rounded-t-lg" : "rounded-lg"
+                  }`}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  {item.que}
+                </button>
+              </h2>
+              {activeIndex === index && (
+                  <div className="px-4 sm:px-5 md:px-6 py-3 sm:py-4 text-sm sm:text-base md:text-lg text-textBlackColor dark:text-gray-300 transition-colors duration-300">
+                  • {item.ans}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
+
 export default Faq;

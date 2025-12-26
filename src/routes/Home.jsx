@@ -1,5 +1,6 @@
 
 import React, { Suspense, lazy } from "react";
+import FloatingShapes from "../components/FloatingShapes";
 
 const Navbar = lazy(() => import("../components/Navbar"));
 const Intro = lazy(() => import("../components/Intro"));
@@ -14,7 +15,8 @@ function Home() {
   document.title = "Manya_Shukla_portfolio";
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div>
+      <div className="relative">
+        <FloatingShapes />
         <Navbar />
         <Intro />
         <Service />
