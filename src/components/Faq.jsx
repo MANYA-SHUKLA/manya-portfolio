@@ -73,5 +73,4 @@ function Faq() {
     </div>
   );
 }
-
 export default Faq;
