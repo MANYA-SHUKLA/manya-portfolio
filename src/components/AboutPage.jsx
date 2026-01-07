@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 function AboutPage() {
   return (
     <section className="relative bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 overflow-hidden transition-colors duration-300">
-      {/* Decorative elements */}
       <motion.div 
         className="absolute top-0 left-0 w-64 h-64 bg-blue-100 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-30 transition-colors duration-300"
         animate={{
