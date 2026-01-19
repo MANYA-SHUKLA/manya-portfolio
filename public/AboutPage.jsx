@@ -1,10 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 function AboutPage() {
   return (
     <section className="relative bg-white py-16 md:py-24 px-6 sm:px-8 md:px-12 lg:px-24 xl:px-32 overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
       
