@@ -30,8 +30,7 @@ function AboutPage() {
           delay: 1,
         }}
       />
-      
-      {/* Floating Shapes */}
+    
       <motion.div
         className="absolute top-1/4 right-10 w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 rounded-full opacity-20 dark:opacity-30 blur-2xl pointer-events-none"
         animate={{
